@@ -1,0 +1,247 @@
+
+/* CSS Code */
+
+/* 'diplay: inline-block;' to combine multiple paragraphs in one line 
+   'diplay: block;' to take the whole line for one label or paragraph
+
+   'line-height:0px;' space between vertical lines
+
+   'vertical-align:top;' docks the element to the top of its div
+
+   'max-width: 500px;' can be usefull to limit the width of an element ( min-width is also usefull )
+
+   'display: grid;' for grid view / table div / arrays
+   'grid-template-columns: 1fr 1fr 1fr;' for grid columns division ('fr' is relative remaining space)
+   '@media (max-width: 500px) { .grid-element { grid-template-columns: 1fr 1fr; } }
+   '@media (min-width: 501px) and (max-width: 999px) { .grid-element { grid-template-columns: 1fr 1fr 1fr; } }
+   '@media (min-width: 1000px) { .grid-element { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+   'column-gap: 20px;' & 'row-gap: 20px;' is the space between columns & rows
+
+   '.c1:hover {}' must come before '.c1:active {}'
+
+   'justify-content: space-between;' property work with flex display and is used to justify items horizontally with adding spaces in between each ( for default flex-direction '' row '' )
+   'align-items: center;' property work with felx display only and is used to align items vertically to the center ( when flex-direction is set to column these two properties are in opposite manner )
+
+   '.searchbar::placeholder{}' :: is used to target some properties of an input element
+
+   'box-shadow: inset 2px 3px 5px rgb(0, 0, 0);' inset is used to target the inside of an element with shadow ( 2px is assigned for the horizontal right shift of shadow, 3px for vertical bottom shift, 5px for blur effect )
+
+   'margin-left: -1px;' will pull the element to the left by -1px instead of pushing it ( this property can be exploited with padding or marquee loop or top/right/left/bottom etc.. )
+
+   'height: 40px; width: 40px; border-radius: 20px;' you got urself a circle ( works if only height or width is assigned, just assign half the number to the radius )
+
+   'flex-shrink: 0;' prevents the elements in a flexbox to shrink whenever the window is resized ( 'flex-shrink: 0;' is opposite to 'width: 0;' )
+   'flex: 1; width: 0;' removes the width of an element to make it shrinkable while maintaing a part of the page when it goes bigger ( use 'width: 100px;' instead of 'right: 100px;' to maintain the width when resizing )
+
+   'position: fixed;' can be used to fix a header on top of the browser window along with 'top: 0px; right: 0px; left: 0px;' ( 'position: static;' is the default for this property )
+   'position: absolute;' can be used to fix an element on top-left corner of the site page along with 'top: 0px; left: 0px;' ( key difference between both is ''fixed to what'' )
+   'Placing a 'position: absolute;' element inside a 'position: fixed;' element is usefull ( it makes the absolute element position relative to the fixed element not the site page )
+   'Placing a 'position: absolute;' element inside a 'position: relative;' element is usefull ( it makes the absolute element position relative to the relative element while the latter is acting normal )
+
+   'border-bottom-width: 5px;' is used to target the specific border location ( Other properties such as color - style - radius can also be implemented )
+   'border: 5px solid gray;' is a very usefull shorthand to combine multiple properties in one line of code ( 5px accounts for border-width )
+
+   'z-index: 10;' assuming that's the highest index, therefore no element on our page will appear above the element with this index
+
+   '.maindiv:hover .hiddenlabeldiv {pointer-events: none;}' is used to address a hidden absolute element when hovering over the main relative element ( 'pointer-events: none;' to prevent the label hovering property )
+
+   'white-space: nowrap;' it prevents a text label from wrapping around like floated text ( put words in one line )
+
+   'padding: 5px;' is equivalent to 'padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;' ( 'margin: 5px;' counts too ) ( 'padding: top right bottom left;' is very usefull ''CLOCKWISE'' )
+
+   'padding: 5px 10px;' is equivalent to 'padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px;' ( 'margin: 5px 10px;' counts too )
+
+*/
+
+body {
+    margin: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+fieldset {
+    border:none;
+    text-align:left;
+}
+
+.idiv {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+input {
+    font-size: 22px;
+    width: 90%;
+}
+
+.ispan {
+    font-size: 20px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.ispans {
+    font-size: 20px;
+    float: left;
+    text-align:left;
+    padding-left:15px;
+}
+
+.ispanss {
+    font-size: 20px;
+    text-align: left;
+}
+
+.bdiv {
+    width:250px;
+    display:inline-block;
+}
+
+p, body input {
+    font-family: Roboto;
+}
+
+.head {
+    font-family: Roboto;
+    color: rgb(150, 0, 0);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+.hc {
+    font-size: 50px;
+    color: rgb(150, 0, 0);
+    transition:font-size 250ms,color 250ms,text-decoration 2s;
+}
+
+.hc:hover {
+    font-size: 60px;
+    color: rgb(170, 0, 0);
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+.marq {
+    color: rgb(0, 120, 140);
+    font-family: Roboto;
+    font-size:20px;
+    margin: 0px 50px 0px 50px;
+}
+
+.marq:hover {
+    opacity:0.8;
+}
+
+.marq:active {
+    opacity: 0.6;
+}
+
+.chh {
+    font-family: Roboto;
+    color: rgb(80, 80, 80);
+    padding-left: 25px;
+    cursor: pointer;
+}
+.chhh {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.chh:hover {
+    color:rgb(50, 50, 50);
+}
+
+.chh:active {
+    color: rgb(20, 20, 20);
+}
+
+.clink {
+    background-color: white;
+    border-color: rgb(180, 0, 0);
+    color: rgb(180, 0, 0);
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    border-style: solid;
+    transition: background-color 250ms, border-color 250ms, color 250ms, box-shadow 250ms;
+}
+
+    .clink:hover {
+        background-color: rgb(180, 0, 0);
+        color: white;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0,0.5);
+    }
+
+    .clink:active {
+        background-color: rgb(120, 0, 0);
+        border-color: rgb(120, 0, 0);
+    }
+
+.cclink {
+    background-color: rgb(0, 140, 165);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: opacity 250ms, background-color 250ms;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0,0.5);
+}
+
+    .cclink:hover {
+        opacity: 0.8;
+    }
+
+    .cclink:active {
+        opacity: 0.6;
+    }
+
+h1 {
+    font-family: Roboto;
+    font-size: 30px;
+    color: rgb(50, 50, 50);
+}
+
+.table {
+    width:60%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    font-family: Roboto;
+}
+
+.c3, .c1:hover, .c2:hover {
+    background-color: rgba(120, 120, 120,0.8);
+}
+
+.c4, .c1:active, .c2:active {
+    background-color: rgb(120, 120, 120);
+}
+
+.c2, .c4:hover, .c3:hover {
+    background-color: rgba(120, 120, 120,0.6);
+}
+
+.c1, .c4:active, .c3:active {
+    background-color: rgba(120, 120, 120,0.4);
+}
