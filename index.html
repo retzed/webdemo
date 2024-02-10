@@ -1,6 +1,4 @@
-
 <!-- HTML Code -->
-
 <!--
 <div> this is a container of elements for which we can use to divide our page to a set of containers </div>
             *****CAN BE RECURSED TO CREATE MULTIPLE LAYOUTS INSIDE SELF OR CREATE AN ARRAY*****
@@ -23,169 +21,297 @@
 
     Inheritance means when you apply a text-decoration to the main-grid for example, it gets passed down to all the inner elements (mostly works for text properties only) (can be targeted to change a certain element properties)
 
-    Semantic elements such as '<header>' / '<nav>' acts like a '<div>' but can be helpful for search engines, screen readers & ai reading the webpage (SEO Related) ( <nav> = 'navigate' for sidebar for example )
+    Semantic elements such as '<header>' / '<nav>' acts like a '<div>' but can be helpful for search engines, ai & screen readers reading the webpage (SEO Related) ( <nav> = 'navigate' for sidebar for example )
     '<main>' / '<section>' also acts like a '<div>' ( <main> for the main content of the page '' main-grid-div '' / <section> for the sub-main content, a certain video for example )
+    <article> / <figure> / <footer> are also semantic containers to be used
 
+    nesting means having an element inside another element
+
+    <ul> <li>1</li> <li>2</li> <li>3</li> </ul> this is unordered list ( use <ol> instead of <ul> for an ordered list )
+
+    <select> <option>1</option> <option>2</option> <option>3</option> </select> this is an option scroll list ( include in a <form> with a submit button for it to be usefull )
+
+    Data attribute ??
 -->
 
 <!DOCTYPE html>
 <html>
-
-<head>
-
+  <head>
     <title>WebDemo 1</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="StyleSheet1.css" />
+  </head>
 
-</head>
-
-<body>
-
-    <div style="display:flex; flex-direction:row; text-align:center; height:50px; vertical-align: top; position: fixed; top: 0px; left: 0px; right: 0px; z-index: 10;">
-        <div style="background-color:lightseagreen; flex: 1;"> . </div>
-        <div style="background-color:lightskyblue; flex: 1;"> </div>
-        <div style="background-color:lightblue; flex: 1;"> </div>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        height: 50px;
+        vertical-align: top;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 10;
+      "
+    >
+      <div style="background-color: lightseagreen; flex: 1">.</div>
+      <div style="background-color: lightskyblue; flex: 1"></div>
+      <div style="background-color: lightblue; flex: 1"></div>
     </div>
 
-    <div style="display:flex; flex-direction:row">
+    <div style="display: flex; flex-direction: row">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          width: 50px;
+          position: fixed;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          z-index: 7;
+        "
+      >
+        <div style="background-color: lightseagreen; flex: 1">.</div>
+        <div style="background-color: lightskyblue; flex: 1"></div>
+        <div style="background-color: lightblue; flex: 1"></div>
+      </div>
 
-        <div style="display:flex; flex-direction:column; text-align:center; width:50px; position: fixed; top: 0px; bottom: 0px; left: 0px;z-index: 7;">
-            <div style="background-color:lightseagreen; flex: 1;"> . </div>
-            <div style="background-color:lightskyblue; flex: 1;"> </div>
-            <div style="background-color:lightblue; flex: 1;"> </div>
+      <div style="flex: 1">
+        <div>
+          <h1 class="head">
+            <span class="hc">HTML - CSS - JS</span>
+            Course
+            <br />
+          </h1>
         </div>
 
-        <div style=" flex:1;">
+        <div>
+          <marquee
+            bgcolor="#cccccc"
+            loop="-1"
+            scrollamount="12"
+            style="padding: 5px 0px 5px 0px"
+          >
+            <a
+              class="marq"
+              href="https://www.youtube.com/watch?v=G3e-cpL7ofc"
+              target="_blank"
+            >
+              HTML - CSS
+            </a>
+            <a
+              class="marq"
+              href="https://www.youtube.com/watch?v=SBmSRK3feww"
+              target="_blank"
+            >
+              JS part1
+            </a>
+            <a
+              class="marq"
+              href="https://www.youtube.com/watch?v=2exKokkn8o0"
+              target="_blank"
+            >
+              JS part2
+            </a>
+            <a
+              class="marq"
+              href="https://www.youtube.com/watch?v=p1QU3kLFPdg"
+              target="_blank"
+            >
+              Post it online
+            </a>
+          </marquee>
+        </div>
 
-            <div>
-                <h1 class="head">
-                    <span class="hc">HTML - CSS - JS</span>
-                    Course
-                    <br />
-                </h1>
-            </div>
+        <br />
 
-            <div>
-                <marquee bgcolor="#cccccc" loop="-1" scrollamount="20" style="padding: 5px 0px 5px 0px;">
-                    <a class="marq" href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank">
-                        HTML - CSS
-                    </a>
-                    <a class="marq" href="https://www.youtube.com/watch?v=SBmSRK3feww" target="_blank">
-                        JS part1
-                    </a>
-                    <a class="marq" href="https://www.youtube.com/watch?v=2exKokkn8o0" target="_blank">
-                        JS part2
-                    </a>
-                    <a class="marq" href="https://www.youtube.com/watch?v=p1QU3kLFPdg" target="_blank">
-                        Post it online
-                    </a>
-                </marquee>
-            </div>
-
-            <br />
-
-            <div>
+        <div>
+          <center>
+            <form>
+              <div class="idiv">
                 <center>
-
-                    <div class="idiv">
-                        <center>
-                            <input type="text" placeholder="Name" />
-                        </center>
-                        <center>
-                            <input type="password" placeholder="Password" />
-                        </center>
-                        <center>
-                            <input type="email" placeholder="Email" />
-                        </center>
-
-                        <fieldset>
-
-                            <span class="ispan">
-                                <input class="chhh" type="radio" id="r1" name="rrr" />
-                                <label class="chh" for="r1">I'm a Radio</label>
-                            </span>
-
-                            <span class="ispanss">
-                                <br />
-                                <input class="chhh" type="radio" id="r2" name="rrr" />
-                                <label class="chh" for="r2">I'm a Radio</label>
-                            </span>
-
-                        </fieldset>
-
-                        <span class="ispans">
-                            <br />
-                            <input class="chhh" type="checkbox" id="ch1" />
-                            <label class="chh" for="ch1">I'm a Checkbox</label>
-                        </span>
-
-                        <span class="ispans">
-                            <br />
-                            <input class="chhh" type="checkbox" id="ch2" />
-                            <label class="chh" for="ch2">I'm a Checkbox</label>
-                        </span>
-
-                    </div>
-
-                    <br />
-                    <br />
-
-                    <div class="bdiv">
-                        <button class="cclink">
-                            Submit Form
-                        </button>
-                    </div>
-
-                    <div class="bdiv">
-                        <button class="clink">
-                            Close Page
-                        </button>
-                    </div>
-
-                    <br />
-                    <br />
-                    <br />
-
-                    <div>
-                        <img src="html_css_javascript_infographic.png" width="700" />
-                    </div>
-
+                  <input
+                    type="text"
+                    style="width: 90%"
+                    placeholder="Name"
+                    onkeyup="value = ''"
+                    onclick="value = 'Don\'t type here'"
+                    id="txt"
+                    disabled
+                  />
                 </center>
+                <center>
+                  <input
+                    type="password"
+                    style="width: 90%"
+                    placeholder="Password"
+                    onkeypress="console.log(event.key)"
+                    disabled
+                  />
+                </center>
+                <center>
+                  <input
+                    type="email"
+                    style="width: 90%"
+                    placeholder="Email"
+                    onkeydown="console.log(event.key)"
+                    disabled
+                  />
+                </center>
+                <fieldset>
+                  <span class="ispan">
+                    <input
+                      class="chhh"
+                      type="radio"
+                      id="r1"
+                      name="rrr"
+                      disabled
+                    />
+                    <label class="chh" for="r1">Ali</label>
+                  </span>
+
+                  <span class="ispanss">
+                    <br />
+                    <input
+                      class="chhh"
+                      type="radio"
+                      id="r2"
+                      name="rrr"
+                      disabled
+                    />
+                    <label class="chh" for="r2">Nour</label>
+                  </span>
+                </fieldset>
+
+                <span class="ispansss">
+                  <br />
+                  <select
+                    class="ispansss"
+                    required
+                    onchange="txt.value = value; btn.innerText='Click Here'; if(value==='Ali'){r1.checked = true;}else{r2.checked = true;}"
+                  >
+                    <option value="" disabled selected>Select Here</option>
+                    <option>Ali</option>
+                    <option>Nour</option>
+                  </select>
+                </span>
+
+                <span class="ispans">
+                  <br />
+                  <input class="chhh" type="checkbox" id="ch2" required />
+                  <label class="chh" for="ch2"
+                    ><strong>الزوز سيدى وكبيرى وتاج راسى</strong></label
+                  >
+                </span>
+              </div>
+
+              <br />
+              <br />
+
+              <div class="bdiv">
+                <button class="cclink" type="button" onclick="imgFunc();">
+                  Submit Form
+                </button>
+              </div>
+
+              <div class="bdiv">
+                <button
+                  class="clink"
+                  type="reset"
+                  onclick="imgdiv.innerHTML = '<img src=\'HTML-CSS-JS Infographic.png\' width=\'50%\' />'"
+                  ondblclick="alert('Done!');"
+                >
+                  Reset Input
+                </button>
+              </div>
+            </form>
+
+            <br />
+            <br />
+            <br />
+
+            <div id="imgdiv">
+              <img src="HTML-CSS-JS Infographic.png" width="50%" />
             </div>
-
-            <br />
-            <br />
-
-            <center>
-                <h1>Grid view / Table / Array</h1>
-                <div class="table">
-                    <div class="c1"> CELL11 </div> <div class="c2">CELL21</div> <div class="c3">CELL31</div> <div class="c4">CELL41</div>
-                    <div class="c1"> CELL12 </div> <div class="c2">CELL22</div> <div class="c3">CELL32</div> <div class="c4">CELL42</div>
-                    <div class="c1"> CELL13 </div> <div class="c2">CELL23</div> <div class="c3">CELL33</div> <div class="c4">CELL43</div>
-                    <div class="c1"> CELL13 </div> <div class="c2">CELL24</div> <div class="c3">CELL34</div> <div class="c4">CELL44</div>
-                </div>
-                <br />
-                <br />
-            </center>
-
+          </center>
         </div>
 
-        <div style="display:flex; flex-direction:column; text-align:center; width:50px; position: fixed; top: 0px; bottom: 0px; right: 0px;z-index: 8;">
-            <div style="background-color:lightblue; flex: 1;">  </div>
-            <div style="background-color:lightskyblue; flex: 1;"> </div>
-            <div style="background-color:lightseagreen; flex: 1;">. </div>
-        </div>
+        <br />
+        <br />
 
+        <center>
+          <h1>Grid view / Table / Array</h1>
+          <div class="table">
+            <div class="c1">CELL11</div>
+            <div class="c2">CELL21</div>
+            <div class="c3">CELL31</div>
+            <div class="c4">CELL41</div>
+            <div class="c1">CELL12</div>
+            <div class="c2">CELL22</div>
+            <div class="c3">CELL32</div>
+            <div class="c4">CELL42</div>
+            <div class="c1">CELL13</div>
+            <div class="c2">CELL23</div>
+            <div class="c3">CELL33</div>
+            <div class="c4">CELL43</div>
+            <div class="c1">CELL13</div>
+            <div class="c2">CELL24</div>
+            <div class="c3">CELL34</div>
+            <div class="c4">CELL44</div>
+          </div>
+          <br />
+          <br />
+        </center>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          width: 50px;
+          position: fixed;
+          top: 0px;
+          bottom: 0px;
+          right: 0px;
+          z-index: 8;
+        "
+      >
+        <div style="background-color: lightblue; flex: 1"></div>
+        <div style="background-color: lightskyblue; flex: 1"></div>
+        <div style="background-color: lightseagreen; flex: 1">.</div>
+      </div>
     </div>
 
-    <div style="display:flex; flex-direction:row; text-align:center; vertical-align:bottom; height:50px; position: fixed; bottom: 0px; left: 0px; right: 0px; z-index: 9;">
-        <div style="background-color:lightblue; flex: 1;">  </div>
-        <div style="background-color:lightskyblue; flex: 1;"> </div>
-        <div style="background-color:lightseagreen; flex: 1;">. </div>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        vertical-align: bottom;
+        height: 50px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 9;
+      "
+    >
+      <div style="background-color: lightblue; flex: 1"></div>
+      <div style="background-color: lightskyblue; flex: 1"></div>
+      <div style="background-color: lightseagreen; flex: 1">.</div>
     </div>
 
-</body>
-
+    <script defer src="JavaScript1.js"></script>
+  </body>
 </html>
